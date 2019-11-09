@@ -9,7 +9,28 @@
 //    <div class="tab">topic here</div>
 
 
+axios.get('https://lambda-times-backend.herokuapp.com/topics')
+     .then((response) => {
+         let parentTab = document.querySelector('.topics');
+         response.data.topics.forEach(element => {
+             parentTab.appendChild(createTab(element));
+         });
+     })
+     .catch((error) => {
+         console.log("data not returned");
+         console.log(error);
+     })
 
 
 
+function createTab(data) {
 
+  const tab = document.createElement('div');
+
+  tab.classList.add('tab');
+
+  tab.textContent = data;
+
+  return tab;
+  console.log(tab);
+};
