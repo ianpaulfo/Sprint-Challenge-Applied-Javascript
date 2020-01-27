@@ -17,7 +17,9 @@ function Tab(topic){
 
 let topicsDiv = document.querySelector(".topics");
 
-axios.get("https://lambda-times-backend.herokuapp.com/topics").then(response=>{
+axios
+.get("https://lambda-times-backend.herokuapp.com/topics")
+.then(response=>{
     response.data.topics.forEach(item => {
         topicsDiv.append(Tab(item));
     })
