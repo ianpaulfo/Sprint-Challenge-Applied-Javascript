@@ -19,7 +19,7 @@ function Header() {
     header.classList.add("header");
     date.classList.add("date")
     temperature.classList.add("temp");
-    date.textContent = "SMARCH 28, 2019";
+    date.textContent = "January 26, 2020";
     headline.textContent = "Lambda Times";
     temperature.textContent = "98°";
 
