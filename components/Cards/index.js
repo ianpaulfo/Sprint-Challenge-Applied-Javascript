@@ -17,3 +17,20 @@
 // </div>
 //
 // Create a card for each of the articles and add the card to the DOM.
+
+function ArticleObj(article) {
+
+}
+
+
+
+
+const cardBox = document.querySelector('.cards-container');
+
+axios.get("https://lambda-times-backend.herokuapp.com/articles").then(response=>{
+    let articles = response.data.articles;
+    console.log(articles)
+    for (i=0; i< articles.length ; i++) {
+        array.forEach(article => {
+            cardBox.append(ArticleObj(article))})};
+});
